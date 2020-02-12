@@ -1,0 +1,25 @@
+Hi team,
+i am getting error like below when i am trying to open anaconda
+Main Error
+expected str, bytes or os.PathLike object, not NoneType
+Traceback
+Traceback (most recent call last):
+  File "C:\Users\priyavenkat\Anaconda3\lib\site-packages\anaconda_navigator\exceptions.py", line 75, in exception_handler
+    return_value = func(*args, **kwargs)
+  File "C:\Users\priyavenkat\Anaconda3\lib\site-packages\anaconda_navigator\app\start.py", line 151, in start_app
+    window = run_app(splash)
+  File "C:\Users\priyavenkat\Anaconda3\lib\site-packages\anaconda_navigator\app\start.py", line 65, in run_app
+    window = MainWindow(splash=splash, tab_project=False)
+  File "C:\Users\priyavenkat\Anaconda3\lib\site-packages\anaconda_navigator\widgets\main_window.py", line 168, in __init__
+    self.api = AnacondaAPI()
+  File "C:\Users\priyavenkat\Anaconda3\lib\site-packages\anaconda_navigator\api\anaconda_api.py", line 2337, in AnacondaAPI
+    ANACONDA_API = _AnacondaAPI()
+  File "C:\Users\priyavenkat\Anaconda3\lib\site-packages\anaconda_navigator\api\anaconda_api.py", line 89, in __init__
+    self._conda_api = CondaAPI()
+  File "C:\Users\priyavenkat\Anaconda3\lib\site-packages\anaconda_navigator\api\conda_api.py", line 1773, in CondaAPI
+    CONDA_API = _CondaAPI()
+  File "C:\Users\priyavenkat\Anaconda3\lib\site-packages\anaconda_navigator\api\conda_api.py", line 353, in __init__
+    self.sys_rc_path = join(self.ROOT_PREFIX, '.condarc')
+  File "C:\Users\priyavenkat\Anaconda3\lib\ntpath.py", line 76, in join
+    path = os.fspath(path)
+TypeError: expected str, bytes or os.PathLike object, not NoneType
